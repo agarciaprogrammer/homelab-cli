@@ -29,16 +29,12 @@ chmod +x bin/homelab.sh
 # Destroy the cluster
 ./bin/homelab.sh destroy
 
----
-
 ## 📂 Project Structure
 Folder	Description
 bin/	Main CLI script
 modules/	Provider modules (Kind, later Minikube/AWS)
 config/	Default configs & YAMLs
 README.md	Project documentation
-
----
 
 ##🧭 Roadmap
 
@@ -47,8 +43,6 @@ MVP 2 – Addons (Prometheus, ArgoCD, etc.)
 MVP 3 – AWS EKS Support
 MVP 4 – Terraform + Helm integration
 MVP 5 – Integration with Project Builder (Staging Mode)
-
----
 
 ## 🧰 Requirements
 
