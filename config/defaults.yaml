@@ -1,0 +1,10 @@
+# Default config for Homelab CLI
+cluster_name: homelab-dev
+node_count: 2
+addons: []
+cleanup_on_exit: true
+
+provider: kind
+enable_dashboard: true
+metrics: false
+region: us-east-1
