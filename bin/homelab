@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -e
+
+for cmd in docker kind kubectl; do
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    echo "❌ Missing dependency: $cmd"
+    exit 1
+  fi
+done
+
+case "$1" in
+  create)
+    bash modules/kind.sh create
+    ;;
+  destroy)
+    bash modules/kind.sh destroy
+    ;;
+  addons)
+    bash modules/addons.sh "$2" "$3"
+    ;;
+  *)
+    echo "Usage: homelab {create|destroy|addons}"
+    ;;
+esac
+
